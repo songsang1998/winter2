@@ -23,7 +23,7 @@ public class Starts : MonoBehaviour
     {
 
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(1);
        
       

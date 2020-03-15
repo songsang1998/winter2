@@ -196,10 +196,10 @@ MonoBehaviour:
     selectlog: "\uD14C\uB514\uB97C \uC548\uC9C0 \uC54A\uB294\uB2E4."
     movescene: 138
   - number: 60
-    selectlog: "\uB204\uAD70\uAC00\uC758 \uC67C \uC190\uC744 \uC7A1\uB294\uB2E4."
+    selectlog: "\uB204\uAD70\uAC00\uC758 \uC67C\uC190\uC744 \uC7A1\uB294\uB2E4."
     movescene: 159
   - number: 61
-    selectlog: "\uB2E4\uB978 \uB204\uAD70\uAC00\uC758 \uC624\uB978 \uC190\uC744 \uC7A1\uB294\uB2E4."
+    selectlog: "\uB2E4\uB978 \uB204\uAD70\uAC00\uC758 \uC624\uB978\uC190\uC744 \uC7A1\uB294\uB2E4."
     movescene: 211
   - number: 62
     selectlog: "\uC544\uB3C4\uB2C8\uC2A4\uAC00 \uC788\uB294 \uAE38"
@@ -285,7 +285,7 @@ MonoBehaviour:
     movescene: 200
   - number: 89
     selectlog: "\uACC4\uB2E8"
-    movescene: 201
+    movescene: 203
   - number: 90
     selectlog: "\uB3CC\uC544\uAC00\uAE30"
     movescene: 198
@@ -438,10 +438,10 @@ MonoBehaviour:
     movescene: 320
   - number: 140
     selectlog: "\uB3CC\uC544\uAC00\uAE30"
-    movescene: 317
+    movescene: 314
   - number: 141
     selectlog: "\uB3CC\uC544\uAC00\uAE30"
-    movescene: 314
+    movescene: 317
   - number: 142
     selectlog: "\uACC4\uB2E8"
     movescene: 321
@@ -691,3 +691,6 @@ MonoBehaviour:
   - number: 220
     selectlog: "\u201C\uBC18\uC9C0\uB294 \uC5B4\uB514 \uC788\uC5B4?\u201D"
     movescene: 352
+  - number: 221
+    selectlog: "\uB2E4\uC74C"
+    movescene: 335
