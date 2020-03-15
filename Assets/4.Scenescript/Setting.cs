@@ -74,7 +74,7 @@ public class Setting : MonoBehaviour
         SelectArray = Texts.instance.Array(textnumber);
 
 
-        Main.transform.position = new Vector2(transform.position.x, 0);
+       
         foreach (Transform child in Back)
         {
 
@@ -90,7 +90,14 @@ public class Setting : MonoBehaviour
 
             }
         }
-        
+        if (textnumber==179||(textnumber>=183 && textnumber<=186)||textnumber==189||textnumber==191||(textnumber>=218&&textnumber<=221)||textnumber==224||textnumber==226||textnumber==340||textnumber==401||textnumber==430||textnumber==470||textnumber==473)
+        {
+            maintext.GetComponent<Text>().fontStyle = FontStyle.Italic;
+        }
+        else
+        {
+            maintext.GetComponent<Text>().fontStyle = FontStyle.Normal;
+        }
         StartCoroutine("TypingAction");
 
 
@@ -164,10 +171,11 @@ public class Setting : MonoBehaviour
         {
             Parent.gameObject.SetActive(true);
             childs = Instantiate(button, transform.position, transform.rotation) as GameObject;
-            childs.transform.SetParent(Parent);
+            childs.transform.SetParent(Parent,false);
             if (stars) {
                 childs.transform.GetChild(0).GetComponent<Text>().color = Color.white;
                 childs.transform.GetChild(1).GetComponent<Image>().color = Color.white;
+
             }
           
            
@@ -176,7 +184,7 @@ public class Setting : MonoBehaviour
         {
             Parent.gameObject.SetActive(true);
             childs = Instantiate(star, transform.position, transform.rotation) as GameObject;
-            childs.transform.SetParent(Parent);
+            childs.transform.SetParent(Parent,false);
             if (stars)
             {
                 childs.transform.GetChild(0).GetComponent<Text>().color = Color.white;
@@ -217,7 +225,7 @@ public class Setting : MonoBehaviour
             Parent.gameObject.SetActive(true);
            
             childs = Instantiate(end, transform.position, transform.rotation) as GameObject;
-            childs.transform.SetParent(Parent);
+            childs.transform.SetParent(Parent,false);
             if (stars)
             {
                 childs.transform.GetChild(0).GetComponent<Text>().color = Color.white;
@@ -239,7 +247,7 @@ public class Setting : MonoBehaviour
             {
                
                 childs = Instantiate(selectbutton, transform.position, transform.rotation) as GameObject;
-                childs.transform.SetParent(Parent);
+                childs.transform.SetParent(Parent,false);
                 childs.GetComponent<SelecterSetting>().Textsetting(a);
                 if (stars)
                 {
@@ -297,6 +305,10 @@ public class Setting : MonoBehaviour
             Manu.GetComponent<Image>().color = new Color(29 / 255f, 32 / 255f, 32 / 255f);
             maintext.GetComponent<Text>().color = Color.white;
             BottomSkip.transform.GetChild(0).GetComponent<Text>().color = Color.white;
+            Manu.transform.GetChild(0).gameObject.SetActive(true);
+            Manu.transform.GetChild(1).gameObject.SetActive(true);
+            Manu.transform.GetChild(2).gameObject.SetActive(false);
+            Manu.transform.GetChild(3).gameObject.SetActive(false);
 
         }
         else
@@ -306,6 +318,10 @@ public class Setting : MonoBehaviour
             Manu.GetComponent<Image>().color = new Color(245 / 255f, 245 / 255f, 245 / 255f);
             maintext.GetComponent<Text>().color = Color.black;
             BottomSkip.transform.GetChild(0).GetComponent<Text>().color = Color.black;
+            Manu.transform.GetChild(2).gameObject.SetActive(true);
+            Manu.transform.GetChild(3).gameObject.SetActive(true);
+            Manu.transform.GetChild(0).gameObject.SetActive(false);
+            Manu.transform.GetChild(1).gameObject.SetActive(false);
 
         }
     }
