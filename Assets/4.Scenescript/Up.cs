@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class Up : MonoBehaviour
@@ -27,7 +28,7 @@ public class Up : MonoBehaviour
     {
         mana.GetComponent<Scenemove>().scenenumber= 1;
         PlayerPrefs.SetInt("Scene", 1);
-        mana.GetComponent<Setting>().SettingStart();
+        SceneManager.LoadScene(0);
     }
         
     
