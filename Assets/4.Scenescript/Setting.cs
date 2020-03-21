@@ -153,6 +153,7 @@ public class Setting : MonoBehaviour
         }
         yield return new WaitForSeconds(0.05f);
         Imageon();
+
     }
       
     void Imageon()
