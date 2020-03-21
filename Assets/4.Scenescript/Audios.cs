@@ -198,6 +198,7 @@ public class Audios : MonoBehaviour
             {
                 GetComponent<AudioSource>().clip = bgm[0];
                 GetComponent<AudioSource>().Play();
+
                 requst = 1;
             }
 
@@ -456,7 +457,7 @@ public class Audios : MonoBehaviour
         {
             if (requst != 6)
             {
-                GetComponent<AudioSource>().clip = bgm[5];
+                GetComponent<AudioSource>().clip = bgm[2];
                 GetComponent<AudioSource>().Play();
                 requst = 6;
             }
@@ -526,7 +527,7 @@ public class Audios : MonoBehaviour
         {
             if (requst != 6)
             {
-                GetComponent<AudioSource>().clip = bgm[5];
+                GetComponent<AudioSource>().clip = bgm[2];
                 GetComponent<AudioSource>().Play();
                 requst = 6;
             }
@@ -556,7 +557,7 @@ public class Audios : MonoBehaviour
         {
             if (requst != 6)
             {
-                GetComponent<AudioSource>().clip = bgm[5];
+                GetComponent<AudioSource>().clip = bgm[2];
                 GetComponent<AudioSource>().Play();
                 requst = 6;
             }
