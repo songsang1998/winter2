@@ -29,22 +29,22 @@ public class Setting : MonoBehaviour
    
     int textnumber;
     GameObject Stop;
-
+    GameObject main;
     // Start is called before the first frame update
-    
-    void Start()
-    {
 
+    void Start()
+    { 
         Manu = GameObject.Find("Manu");
+        main = GameObject.Find("main").gameObject;
         //Listbutton = Manu.transform.GetChild(0).gameObject;
         Bottom= GameObject.Find("bottom");
         BottomSkip = GameObject.Find("SkipButton");
         ScroolArea = GameObject.Find("ScroolArea");
-        Main = GameObject.Find("main").transform;
-        Upimage = GameObject.Find("main").transform.GetChild(0).GetComponent<Transform>();
-        maintexts = GameObject.Find("main").transform.GetChild(1).GetComponent<Transform>();
-        DownImage = GameObject.Find("main").transform.GetChild(3).GetComponent<Transform>();
-        Parent = GameObject.Find("main").transform.GetChild(2).GetComponent<Transform>();
+        Main = main.transform;
+        Upimage = main.transform.GetChild(0).GetComponent<Transform>();
+        maintexts = main.transform.GetChild(1).GetComponent<Transform>();
+        DownImage = main.transform.GetChild(3).GetComponent<Transform>();
+        Parent=main.transform.GetChild(2).GetComponent<Transform>();
         Back = GameObject.Find("background").transform;
         Stop = GameObject.Find("Canvas").transform.GetChild(7).gameObject;
         Audios = GameObject.Find("Audio Source").gameObject;
@@ -64,6 +64,7 @@ public class Setting : MonoBehaviour
        // Listbutton.SetActive(false);
         skip = false;
         maintext.text = "";
+
         textnumber = GetComponent<Scenemove>().scenenumber;
         PlayerPrefs.SetInt("data"+textnumber, 1);
         PlayerPrefs.SetInt("Scene", textnumber);
@@ -72,7 +73,7 @@ public class Setting : MonoBehaviour
         otext = Texts.instance.Set(textnumber);
        
         SelectArray = Texts.instance.Array(textnumber);
-
+        
 
        
         foreach (Transform child in Back)
@@ -151,7 +152,7 @@ public class Setting : MonoBehaviour
             Stop.SetActive(true);
             maintext.text = otext;
         }
-        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(0.25f);
         Imageon();
 
     }
@@ -167,12 +168,13 @@ public class Setting : MonoBehaviour
     
     IEnumerator SelectAction()
     {
-
+        Parent.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(Parent.gameObject.GetComponent<RectTransform>().sizeDelta.x, 0);
         if (SelectArray[0] ==0)
         {
             Parent.gameObject.SetActive(true);
             childs = Instantiate(button, transform.position, transform.rotation) as GameObject;
             childs.transform.SetParent(Parent,false);
+           
             if (stars) {
                 childs.transform.GetChild(0).GetComponent<Text>().color = Color.white;
                 childs.transform.GetChild(1).GetComponent<Image>().color = Color.white;

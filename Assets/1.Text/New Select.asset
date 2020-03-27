@@ -185,13 +185,13 @@ MonoBehaviour:
     movescene: 133
   - number: 0
     selectlog: "\uD14C\uB514\uB97C \uC548\uB294\uB2E4."
-    movescene: 140
+    movescene: 143
   - number: 0
     selectlog: "\uD14C\uB514\uB97C \uC548\uC9C0 \uC54A\uB294\uB2E4."
     movescene: 137
   - number: 0
     selectlog: "\uD14C\uB514\uB97C \uC548\uB294\uB2E4."
-    movescene: 143
+    movescene: 502
   - number: 0
     selectlog: "\uD14C\uB514\uB97C \uC548\uC9C0 \uC54A\uB294\uB2E4."
     movescene: 138
@@ -402,7 +402,7 @@ MonoBehaviour:
     movescene: 302
   - number: 0
     selectlog: "\uC7A5\uC2DD\uC7A5"
-    movescene: 306
+    movescene: 305
   - number: 0
     selectlog: "\uBC16"
     movescene: 287
@@ -706,3 +706,6 @@ MonoBehaviour:
   - number: 0
     selectlog: "\uB098\uAC00\uC9C0 \uC54A\uB294\uB2E4."
     movescene: 207
+  - number: 0
+    selectlog: "\uC21C\uC2DD\uAC04\uC5D0 \uBC00\uB824\uC654\uB2E4."
+    movescene: 144
